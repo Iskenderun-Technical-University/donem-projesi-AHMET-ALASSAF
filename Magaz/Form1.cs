@@ -12,6 +12,9 @@ namespace Magaz
 {
     public partial class Form1 : Form
     {
+        int move;
+        int movx;
+        int movy;
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +50,28 @@ namespace Magaz
         private void bunifuImageButton1_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = 1;
+            movx = e.X;
+            movy = e.Y;
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = 0;
+
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - move, MousePosition.Y - move);
+            }
+
         }
     }
 }
