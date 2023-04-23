@@ -36,3 +36,7 @@ C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.cspro
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.csproj.CopyComplete
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.exe
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.pdb
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.ekle.resources
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.exe.licenses
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
