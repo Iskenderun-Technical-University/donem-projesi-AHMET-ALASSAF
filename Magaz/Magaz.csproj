@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cesitler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cesitler.Designer.cs">
+      <DependentUpon>cesitler.cs</DependentUpon>
+    </Compile>
     <Compile Include="ekle .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="cesitler.resx">
+      <DependentUpon>cesitler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ekle .resx">
       <DependentUpon>ekle .cs</DependentUpon>
     </EmbeddedResource>

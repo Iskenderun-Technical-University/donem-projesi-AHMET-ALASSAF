@@ -21,5 +21,10 @@ namespace Magaz
         {
 
         }
+
+        private void bunifuclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelbaslik = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifumini)).BeginInit();
@@ -59,6 +61,7 @@
             this.panel1.Controls.Add(this.bunifuImageButton1);
             this.panel1.Controls.Add(this.bunifumini);
             this.panel1.Controls.Add(this.bunifuclose);
+            this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,17 +72,19 @@
             // 
             this.labelbaslik.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelbaslik.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.labelbaslik, BunifuAnimatorNS.DecorationType.None);
             this.labelbaslik.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelbaslik.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelbaslik.Location = new System.Drawing.Point(433, 29);
             this.labelbaslik.Name = "labelbaslik";
-            this.labelbaslik.Size = new System.Drawing.Size(334, 29);
+            this.labelbaslik.Size = new System.Drawing.Size(328, 29);
             this.labelbaslik.TabIndex = 3;
-            this.labelbaslik.Text = "mağaza yönetimi programı";
+            this.labelbaslik.Text = "Mağaza Yönetim Programı";
             // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(159, 16);
@@ -94,6 +99,7 @@
             // bunifumini
             // 
             this.bunifumini.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.bunifumini, BunifuAnimatorNS.DecorationType.None);
             this.bunifumini.Image = ((System.Drawing.Image)(resources.GetObject("bunifumini.Image")));
             this.bunifumini.ImageActive = null;
             this.bunifumini.Location = new System.Drawing.Point(86, 16);
@@ -108,6 +114,7 @@
             // bunifuclose
             // 
             this.bunifuclose.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.bunifuclose, BunifuAnimatorNS.DecorationType.None);
             this.bunifuclose.Image = ((System.Drawing.Image)(resources.GetObject("bunifuclose.Image")));
             this.bunifuclose.ImageActive = null;
             this.bunifuclose.Location = new System.Drawing.Point(21, 16);
@@ -126,10 +133,11 @@
             this.panel2.Controls.Add(this.bunifuselme);
             this.panel2.Controls.Add(this.bunifuduzen);
             this.panel2.Controls.Add(this.bunifuekle);
+            this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 650);
+            this.panel2.Location = new System.Drawing.Point(0, 656);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1200, 100);
+            this.panel2.Size = new System.Drawing.Size(1200, 94);
             this.panel2.TabIndex = 1;
             // 
             // bunifuBilgi
@@ -144,6 +152,7 @@
             this.bunifuBilgi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuBilgi.BackgroundImage")));
             this.bunifuBilgi.ButtonText = "Ürün Bilgileri";
             this.bunifuBilgi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuBilgi, BunifuAnimatorNS.DecorationType.None);
             this.bunifuBilgi.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuBilgi.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuBilgi.IdleBorderThickness = 1;
@@ -151,7 +160,7 @@
             this.bunifuBilgi.IdleFillColor = System.Drawing.Color.White;
             this.bunifuBilgi.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuBilgi.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuBilgi.Location = new System.Drawing.Point(51, 22);
+            this.bunifuBilgi.Location = new System.Drawing.Point(51, 16);
             this.bunifuBilgi.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuBilgi.Name = "bunifuBilgi";
             this.bunifuBilgi.Size = new System.Drawing.Size(229, 62);
@@ -170,6 +179,7 @@
             this.bunifuselme.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuselme.BackgroundImage")));
             this.bunifuselme.ButtonText = "Ürünü Silme";
             this.bunifuselme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuselme, BunifuAnimatorNS.DecorationType.None);
             this.bunifuselme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuselme.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuselme.IdleBorderThickness = 1;
@@ -177,7 +187,7 @@
             this.bunifuselme.IdleFillColor = System.Drawing.Color.White;
             this.bunifuselme.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuselme.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuselme.Location = new System.Drawing.Point(341, 22);
+            this.bunifuselme.Location = new System.Drawing.Point(341, 16);
             this.bunifuselme.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuselme.Name = "bunifuselme";
             this.bunifuselme.Size = new System.Drawing.Size(229, 62);
@@ -196,6 +206,7 @@
             this.bunifuduzen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuduzen.BackgroundImage")));
             this.bunifuduzen.ButtonText = "Ürünü Düzenleme";
             this.bunifuduzen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuduzen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuduzen.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuduzen.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuduzen.IdleBorderThickness = 1;
@@ -203,7 +214,7 @@
             this.bunifuduzen.IdleFillColor = System.Drawing.Color.White;
             this.bunifuduzen.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuduzen.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuduzen.Location = new System.Drawing.Point(631, 22);
+            this.bunifuduzen.Location = new System.Drawing.Point(631, 16);
             this.bunifuduzen.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuduzen.Name = "bunifuduzen";
             this.bunifuduzen.Size = new System.Drawing.Size(229, 62);
@@ -222,6 +233,7 @@
             this.bunifuekle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuekle.BackgroundImage")));
             this.bunifuekle.ButtonText = "Yeni Ürün Ekleme";
             this.bunifuekle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuekle, BunifuAnimatorNS.DecorationType.None);
             this.bunifuekle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuekle.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuekle.IdleBorderThickness = 1;
@@ -229,7 +241,7 @@
             this.bunifuekle.IdleFillColor = System.Drawing.Color.White;
             this.bunifuekle.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuekle.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuekle.Location = new System.Drawing.Point(921, 21);
+            this.bunifuekle.Location = new System.Drawing.Point(921, 15);
             this.bunifuekle.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuekle.Name = "bunifuekle";
             this.bunifuekle.Size = new System.Drawing.Size(229, 59);
@@ -240,20 +252,22 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView1);
+            this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 84);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1200, 566);
+            this.panel3.Size = new System.Drawing.Size(1200, 572);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuTransition1.SetDecoration(this.dataGridView1, BunifuAnimatorNS.DecorationType.None);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1200, 566);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 572);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.ColumnHeadersDefaultCellStyleChanged += new System.EventHandler(this.Form1_Load);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -262,6 +276,28 @@
             // 
             this.bunifuElipse1.ElipseRadius = 30;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Scale;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
+            this.bunifuTransition1.Interval = 5;
             // 
             // Form1
             // 
@@ -272,6 +308,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -310,6 +347,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuBilgi;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuselme;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuduzen;
+        private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
     }
 }
 

@@ -22,7 +22,7 @@ namespace Magaz
         //var for sqlcon
         SqlConnection bag = new SqlConnection();
         SqlDataAdapter db = new SqlDataAdapter();
-        DataTable dt = new DataTable();
+     
 
         public Form1()
         {
@@ -53,7 +53,8 @@ namespace Magaz
 
         private void bunifuekle_Click(object sender, EventArgs e)
         {
-
+            Form frm_ek = new ekle();
+            bunifuTransition1.ShowSync(frm_ek);
         }
 
         private void bunifuImageButton1_Click_1(object sender, EventArgs e)
@@ -90,12 +91,12 @@ namespace Magaz
 
         private void Form1_Activated(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
             bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
             var sql = "SELECT  id as sıralam,başlık,yapan,fiyat,çeşitler FROM urunliste";
             db = new SqlDataAdapter(sql, bag);
             db.Fill(dt);
             dataGridView1.DataSource = dt;
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -89,15 +89,16 @@ namespace Magaz
             this.bunifuclose.TabIndex = 1;
             this.bunifuclose.TabStop = false;
             this.bunifuclose.Zoom = 10;
+            this.bunifuclose.Click += new System.EventHandler(this.bunifuclose_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.bunifuekle2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 602);
+            this.panel2.Location = new System.Drawing.Point(0, 593);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 81);
+            this.panel2.Size = new System.Drawing.Size(800, 90);
             this.panel2.TabIndex = 1;
             // 
             // bunifuekle2
@@ -119,7 +120,7 @@ namespace Magaz
             this.bunifuekle2.IdleFillColor = System.Drawing.Color.White;
             this.bunifuekle2.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuekle2.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuekle2.Location = new System.Drawing.Point(286, 11);
+            this.bunifuekle2.Location = new System.Drawing.Point(286, 20);
             this.bunifuekle2.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuekle2.Name = "bunifuekle2";
             this.bunifuekle2.Size = new System.Drawing.Size(229, 59);
@@ -133,7 +134,7 @@ namespace Magaz
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 68);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 534);
+            this.panel3.Size = new System.Drawing.Size(800, 525);
             this.panel3.TabIndex = 2;
             // 
             // bunifuGroupBox2
@@ -154,7 +155,7 @@ namespace Magaz
             this.bunifuGroupBox2.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
             this.bunifuGroupBox2.Location = new System.Drawing.Point(450, 6);
             this.bunifuGroupBox2.Name = "bunifuGroupBox2";
-            this.bunifuGroupBox2.Size = new System.Drawing.Size(347, 508);
+            this.bunifuGroupBox2.Size = new System.Drawing.Size(338, 508);
             this.bunifuGroupBox2.TabIndex = 1;
             this.bunifuGroupBox2.TabStop = false;
             this.bunifuGroupBox2.Text = "ikincil bilgiler";
@@ -183,11 +184,12 @@ namespace Magaz
             // bunifuRating1
             // 
             this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuRating1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuRating1.Location = new System.Drawing.Point(14, 189);
+            this.bunifuRating1.Location = new System.Drawing.Point(14, 194);
             this.bunifuRating1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuRating1.Name = "bunifuRating1";
-            this.bunifuRating1.Size = new System.Drawing.Size(281, 57);
+            this.bunifuRating1.Size = new System.Drawing.Size(324, 57);
             this.bunifuRating1.TabIndex = 5;
             this.bunifuRating1.Value = 0;
             // 
@@ -382,6 +384,7 @@ namespace Magaz
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "ekle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuclose)).EndInit();
             this.panel2.ResumeLayout(false);
