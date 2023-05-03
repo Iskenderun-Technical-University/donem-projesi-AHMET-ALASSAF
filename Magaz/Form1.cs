@@ -22,6 +22,7 @@ namespace Magaz
         //var for sqlcon
         SqlConnection bag = new SqlConnection();
         SqlDataAdapter db = new SqlDataAdapter();
+        
      
 
         public Form1()
@@ -64,23 +65,18 @@ namespace Magaz
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            move = 1;
-            movx = e.X;
-            movy = e.Y;
+            
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            move = 0;
+          
 
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (move == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - move, MousePosition.Y - move);
-            }
+            
 
         }
 
@@ -93,15 +89,47 @@ namespace Magaz
         {
             DataTable dt = new DataTable();
             bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
-            var sql = "SELECT  id as sıralam,başlık,yapan,fiyat,çeşitler FROM urunliste";
+            var sql = "SELECT  id as sıra,başlık,yapan,fiyat,çeşitler FROM urunliste";
             db = new SqlDataAdapter(sql, bag);
             db.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].HeaderText = "sıra";
+            dataGridView1.Columns[1].HeaderText = "başlık";
+            dataGridView1.Columns[2].HeaderText = "yapan";
+            dataGridView1.Columns[3].HeaderText = "fiyat";
+            dataGridView1.Columns[4].HeaderText = "çeşitler";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = 1;
+            movx = e.X;
+            movy = e.Y;
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = 0;
+
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movx, MousePosition.Y - movy);
+            }
+        }
+
+        private void bunifuBilgi_Click(object sender, EventArgs e)
+        {
+            Form diab = new home_effect();
+            diab.Show();
         }
     }
 }

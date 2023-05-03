@@ -76,7 +76,7 @@ namespace Magaz
             this.bunifuekle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bunifuekle.BackColor = System.Drawing.Color.White;
             this.bunifuekle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuekle.BackgroundImage")));
-            this.bunifuekle.ButtonText = "Ekleme";
+            this.bunifuekle.ButtonText = "Ekle";
             this.bunifuekle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuekle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuekle.ForeColor = System.Drawing.Color.SeaGreen;

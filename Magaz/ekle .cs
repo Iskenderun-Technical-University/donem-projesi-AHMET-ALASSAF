@@ -26,5 +26,11 @@ namespace Magaz
         {
             this.Close();
         }
+
+        private void butek1_Click(object sender, EventArgs e)
+        {
+            Form frm_cesit = new cesitler();
+            bunifuTransition1.ShowSync(frm_cesit);
+        }
     }
 }
