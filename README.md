@@ -1,1 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-8d59dc4de5201274e310e4c54b9627a8934c3b88527886e3b421487c677d23eb.svg)](https://classroom.github.com/a/uelKf0-p)
+#1. Motivasyon
+Daha önce bir butikte çalıştım. Mağazanın yöntemliğin şeklini beğendim, Bu yüzden bu projeyi yapmaya  motive oldum.
+
+#2. Amaç
+Bu program Ürünlerin Genel bilgiler içerecektir.
+Aynı türden herhangi bir mağaza programı gibi
+Onun Özeliği, farklı çeşitlerin varlığıdır.
+bu özellik yönetici olan için daha kolay hale getirir
+ Tüm ürünlere kolayca ulaşabilecektir.
+
+#3.veritabanı tabloları
+Projede ürünleri sergilemek için iki farklı tablo kullandım.
+İlk tablo  ürün bilgilerini  ve onun fotoğrafı içerir.
+İkinci tablo  ürünlerin çeşitleri (Türleri) içerir.
+Birinci tablonun içindekileri ikinci tabloya uygun çeşiti altında yer alınır.
