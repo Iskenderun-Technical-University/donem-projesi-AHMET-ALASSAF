@@ -91,6 +91,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="three_effect .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="three_effect .Designer.cs">
+      <DependentUpon>three_effect .cs</DependentUpon>
+    </Compile>
+    <Compile Include="two_effect .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="two_effect .Designer.cs">
+      <DependentUpon>two_effect .cs</DependentUpon>
+    </Compile>
     <Compile Include="home_effect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="three_effect .resx">
+      <DependentUpon>three_effect .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="two_effect .resx">
+      <DependentUpon>two_effect .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home_effect.resx">
       <DependentUpon>home_effect.cs</DependentUpon>

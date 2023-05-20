@@ -42,3 +42,5 @@ C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.exe.l
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.cesitler.resources
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.home_effect.resources
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.three_effect.resources
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.two_effect.resources

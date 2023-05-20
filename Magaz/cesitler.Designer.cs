@@ -30,31 +30,31 @@ namespace Magaz
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cesitler));
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TEXTER = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labcesit = new System.Windows.Forms.Label();
             this.bunifuekle = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuclose1 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuclose1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuMaterialTextbox1
+            // TEXTER
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 22F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 6;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(64, 217);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(553, 108);
-            this.bunifuMaterialTextbox1.TabIndex = 6;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TEXTER.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TEXTER.Font = new System.Drawing.Font("Century Gothic", 22F);
+            this.TEXTER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TEXTER.HintForeColor = System.Drawing.Color.Empty;
+            this.TEXTER.HintText = "";
+            this.TEXTER.isPassword = false;
+            this.TEXTER.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TEXTER.LineIdleColor = System.Drawing.Color.Gray;
+            this.TEXTER.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TEXTER.LineThickness = 6;
+            this.TEXTER.Location = new System.Drawing.Point(64, 217);
+            this.TEXTER.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.TEXTER.Name = "TEXTER";
+            this.TEXTER.Size = new System.Drawing.Size(553, 108);
+            this.TEXTER.TabIndex = 6;
+            this.TEXTER.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // labcesit
             // 
@@ -91,6 +91,7 @@ namespace Magaz
             this.bunifuekle.Size = new System.Drawing.Size(657, 50);
             this.bunifuekle.TabIndex = 7;
             this.bunifuekle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuekle.Click += new System.EventHandler(this.bunifuekle_Click);
             // 
             // bunifuclose1
             // 
@@ -114,7 +115,7 @@ namespace Magaz
             this.ClientSize = new System.Drawing.Size(687, 482);
             this.Controls.Add(this.bunifuclose1);
             this.Controls.Add(this.bunifuekle);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Controls.Add(this.TEXTER);
             this.Controls.Add(this.labcesit);
             this.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -130,7 +131,7 @@ namespace Magaz
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TEXTER;
         private System.Windows.Forms.Label labcesit;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuekle;
         private Bunifu.Framework.UI.BunifuImageButton bunifuclose1;

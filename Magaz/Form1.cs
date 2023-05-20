@@ -19,6 +19,7 @@ namespace Magaz
         int movx;
         int movy;
 
+
         //var for sqlcon
         SqlConnection bag = new SqlConnection();
         SqlDataAdapter db = new SqlDataAdapter();
