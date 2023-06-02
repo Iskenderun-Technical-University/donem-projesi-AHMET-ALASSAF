@@ -40,7 +40,7 @@ namespace Magaz
             // TEXTER
             // 
             this.TEXTER.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TEXTER.Font = new System.Drawing.Font("Century Gothic", 22F);
+            this.TEXTER.Font = new System.Drawing.Font("Century Gothic", 30F);
             this.TEXTER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TEXTER.HintForeColor = System.Drawing.Color.Empty;
             this.TEXTER.HintText = "";
@@ -48,7 +48,7 @@ namespace Magaz
             this.TEXTER.LineFocusedColor = System.Drawing.Color.Blue;
             this.TEXTER.LineIdleColor = System.Drawing.Color.Gray;
             this.TEXTER.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.TEXTER.LineThickness = 6;
+            this.TEXTER.LineThickness = 8;
             this.TEXTER.Location = new System.Drawing.Point(64, 217);
             this.TEXTER.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.TEXTER.Name = "TEXTER";
@@ -59,10 +59,10 @@ namespace Magaz
             // labcesit
             // 
             this.labcesit.AutoSize = true;
-            this.labcesit.Font = new System.Drawing.Font("Tahoma", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labcesit.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labcesit.Location = new System.Drawing.Point(227, 143);
             this.labcesit.Name = "labcesit";
-            this.labcesit.Size = new System.Drawing.Size(239, 53);
+            this.labcesit.Size = new System.Drawing.Size(218, 48);
             this.labcesit.TabIndex = 5;
             this.labcesit.Text = "ÇEŞİTLER";
             // 

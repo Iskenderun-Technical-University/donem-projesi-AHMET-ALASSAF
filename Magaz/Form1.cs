@@ -23,6 +23,7 @@ namespace Magaz
         //var for sqlcon
         SqlConnection bag = new SqlConnection();
         SqlDataAdapter db = new SqlDataAdapter();
+     
         
      
 
@@ -90,7 +91,7 @@ namespace Magaz
         {
             DataTable dt = new DataTable();
             bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
-            var sql = "SELECT  id as sıra,başlık,yapan,fiyat,çeşitler FROM urunliste";
+            var sql = "SELECT  id ,baslık,yapan,fiyat,cesitler FROM urunliste";
             db = new SqlDataAdapter(sql, bag);
             db.Fill(dt);
             dataGridView1.DataSource = dt;

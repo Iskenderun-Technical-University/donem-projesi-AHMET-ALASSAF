@@ -30,7 +30,7 @@ namespace Magaz
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ekle));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,17 +41,17 @@ namespace Magaz
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuRating1 = new Bunifu.Framework.UI.BunifuRating();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.Rating1 = new Bunifu.Framework.UI.BunifuRating();
+            this.Datepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.lab7 = new System.Windows.Forms.Label();
             this.lab6 = new System.Windows.Forms.Label();
             this.lab5 = new System.Windows.Forms.Label();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.butek1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtyap = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtfiyat = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtbas = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lab4 = new System.Windows.Forms.Label();
             this.lab3 = new System.Windows.Forms.Label();
             this.lab2 = new System.Windows.Forms.Label();
@@ -117,7 +117,7 @@ namespace Magaz
             this.bunifuekle2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bunifuekle2.BackColor = System.Drawing.Color.Silver;
             this.bunifuekle2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuekle2.BackgroundImage")));
-            this.bunifuekle2.ButtonText = "Ekleme";
+            this.bunifuekle2.ButtonText = "Ekle";
             this.bunifuekle2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.bunifuekle2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuekle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -133,6 +133,7 @@ namespace Magaz
             this.bunifuekle2.Size = new System.Drawing.Size(229, 59);
             this.bunifuekle2.TabIndex = 1;
             this.bunifuekle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuekle2.Click += new System.EventHandler(this.bunifuekle2_Click);
             // 
             // panel3
             // 
@@ -152,8 +153,8 @@ namespace Magaz
             this.bunifuGroupBox2.BorderThickness = 1;
             this.bunifuGroupBox2.Controls.Add(this.linkLabel1);
             this.bunifuGroupBox2.Controls.Add(this.pictureBox1);
-            this.bunifuGroupBox2.Controls.Add(this.bunifuRating1);
-            this.bunifuGroupBox2.Controls.Add(this.bunifuDatepicker1);
+            this.bunifuGroupBox2.Controls.Add(this.Rating1);
+            this.bunifuGroupBox2.Controls.Add(this.Datepicker1);
             this.bunifuGroupBox2.Controls.Add(this.lab7);
             this.bunifuGroupBox2.Controls.Add(this.lab6);
             this.bunifuGroupBox2.Controls.Add(this.lab5);
@@ -174,12 +175,13 @@ namespace Magaz
             this.linkLabel1.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.linkLabel1, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel1.Location = new System.Drawing.Point(20, 411);
+            this.linkLabel1.Location = new System.Drawing.Point(20, 413);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(147, 21);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = " fotoğraf yükleme";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -192,33 +194,33 @@ namespace Magaz
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuRating1
+            // Rating1
             // 
-            this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition1.SetDecoration(this.bunifuRating1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuRating1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuRating1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuRating1.Location = new System.Drawing.Point(14, 194);
-            this.bunifuRating1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuRating1.Name = "bunifuRating1";
-            this.bunifuRating1.Size = new System.Drawing.Size(324, 57);
-            this.bunifuRating1.TabIndex = 5;
-            this.bunifuRating1.Value = 0;
+            this.Rating1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.Rating1, BunifuAnimatorNS.DecorationType.None);
+            this.Rating1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rating1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Rating1.Location = new System.Drawing.Point(8, 192);
+            this.Rating1.Margin = new System.Windows.Forms.Padding(5);
+            this.Rating1.Name = "Rating1";
+            this.Rating1.Size = new System.Drawing.Size(324, 57);
+            this.Rating1.TabIndex = 5;
+            this.Rating1.Value = 0;
             // 
-            // bunifuDatepicker1
+            // Datepicker1
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuTransition1.SetDecoration(this.bunifuDatepicker1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(14, 105);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(293, 36);
-            this.bunifuDatepicker1.TabIndex = 4;
-            this.bunifuDatepicker1.Value = new System.DateTime(2023, 4, 23, 18, 13, 42, 917);
+            this.Datepicker1.BackColor = System.Drawing.Color.SeaGreen;
+            this.Datepicker1.BorderRadius = 0;
+            this.bunifuTransition1.SetDecoration(this.Datepicker1, BunifuAnimatorNS.DecorationType.None);
+            this.Datepicker1.ForeColor = System.Drawing.Color.White;
+            this.Datepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.Datepicker1.FormatCustom = null;
+            this.Datepicker1.Location = new System.Drawing.Point(14, 105);
+            this.Datepicker1.Margin = new System.Windows.Forms.Padding(5);
+            this.Datepicker1.Name = "Datepicker1";
+            this.Datepicker1.Size = new System.Drawing.Size(293, 36);
+            this.Datepicker1.TabIndex = 4;
+            this.Datepicker1.Value = new System.DateTime(2023, 4, 23, 18, 13, 42, 917);
             // 
             // lab7
             // 
@@ -257,9 +259,9 @@ namespace Magaz
             this.bunifuGroupBox1.BorderThickness = 1;
             this.bunifuGroupBox1.Controls.Add(this.butek1);
             this.bunifuGroupBox1.Controls.Add(this.comboBox1);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuMaterialTextbox3);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuMaterialTextbox2);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuMaterialTextbox1);
+            this.bunifuGroupBox1.Controls.Add(this.txtyap);
+            this.bunifuGroupBox1.Controls.Add(this.txtfiyat);
+            this.bunifuGroupBox1.Controls.Add(this.txtbas);
             this.bunifuGroupBox1.Controls.Add(this.lab4);
             this.bunifuGroupBox1.Controls.Add(this.lab3);
             this.bunifuGroupBox1.Controls.Add(this.lab2);
@@ -298,65 +300,65 @@ namespace Magaz
             this.comboBox1.Size = new System.Drawing.Size(166, 29);
             this.comboBox1.TabIndex = 7;
             // 
-            // bunifuMaterialTextbox3
+            // txtyap
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.bunifuMaterialTextbox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(9, 180);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(268, 44);
-            this.bunifuMaterialTextbox3.TabIndex = 6;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtyap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.txtyap, BunifuAnimatorNS.DecorationType.None);
+            this.txtyap.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtyap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtyap.HintForeColor = System.Drawing.Color.Empty;
+            this.txtyap.HintText = "";
+            this.txtyap.isPassword = false;
+            this.txtyap.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtyap.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtyap.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtyap.LineThickness = 3;
+            this.txtyap.Location = new System.Drawing.Point(9, 180);
+            this.txtyap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtyap.Name = "txtyap";
+            this.txtyap.Size = new System.Drawing.Size(268, 44);
+            this.txtyap.TabIndex = 6;
+            this.txtyap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox2
+            // txtfiyat
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.bunifuMaterialTextbox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(9, 274);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(268, 44);
-            this.bunifuMaterialTextbox2.TabIndex = 5;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtfiyat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.txtfiyat, BunifuAnimatorNS.DecorationType.None);
+            this.txtfiyat.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtfiyat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtfiyat.HintForeColor = System.Drawing.Color.Empty;
+            this.txtfiyat.HintText = "";
+            this.txtfiyat.isPassword = false;
+            this.txtfiyat.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtfiyat.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtfiyat.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtfiyat.LineThickness = 3;
+            this.txtfiyat.Location = new System.Drawing.Point(9, 274);
+            this.txtfiyat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtfiyat.Name = "txtfiyat";
+            this.txtfiyat.Size = new System.Drawing.Size(268, 44);
+            this.txtfiyat.TabIndex = 5;
+            this.txtfiyat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox1
+            // txtbas
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.bunifuMaterialTextbox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(9, 78);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(268, 44);
-            this.bunifuMaterialTextbox1.TabIndex = 4;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtbas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.txtbas, BunifuAnimatorNS.DecorationType.None);
+            this.txtbas.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtbas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbas.HintForeColor = System.Drawing.Color.Empty;
+            this.txtbas.HintText = "";
+            this.txtbas.isPassword = false;
+            this.txtbas.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtbas.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtbas.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtbas.LineThickness = 3;
+            this.txtbas.Location = new System.Drawing.Point(9, 78);
+            this.txtbas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbas.Name = "txtbas";
+            this.txtbas.Size = new System.Drawing.Size(268, 44);
+            this.txtbas.TabIndex = 4;
+            this.txtbas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lab4
             // 
@@ -403,22 +405,22 @@ namespace Magaz
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Scale;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation3;
             this.bunifuTransition1.Interval = 7;
             // 
             // ekle
@@ -436,6 +438,7 @@ namespace Magaz
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "ekle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.ekle_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuclose)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -466,13 +469,13 @@ namespace Magaz
         private System.Windows.Forms.Label lab7;
         private System.Windows.Forms.Label lab6;
         private System.Windows.Forms.Label lab5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtyap;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtfiyat;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtbas;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuRating bunifuRating1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuRating Rating1;
+        private Bunifu.Framework.UI.BunifuDatepicker Datepicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button butek1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
