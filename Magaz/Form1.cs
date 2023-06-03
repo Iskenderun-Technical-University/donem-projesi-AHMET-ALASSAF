@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.Data.SqlClient;
 
 namespace Magaz
@@ -169,6 +170,17 @@ namespace Magaz
                 frm_ek.comboBox1.Text = list[3];
                 frm_ek.Datepicker1.Value =Convert.ToDateTime(list[4]) ;
                 frm_ek.Rating1.Text = list[5];
+                bag.Close();
+
+                //image Reading in database
+                bag.Open();
+                mmd.CommandText = "SELECT FOTOGRAF FROM URUNLISTE WHERE ID=@IDIMAGE";
+                mmd.Parameters.AddWithValue("@IDIMAGE", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                byte[] img = (byte[])mmd.ExecuteScalar();
+                MemoryStream me = new MemoryStream();
+                me.Write(img, 0, img.Length);
+                frm_ek.pictureBox1.Image = Image.FromStream(me);
+
             }
             catch (Exception EX)
             {
@@ -178,6 +190,21 @@ namespace Magaz
             {
                 bag.Close();
             }
+            mmd.Parameters.Clear();
+        }
+
+        private void bunifuselme_Click(object sender, EventArgs e)
+        {
+            bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
+            mmd.Connection = bag;
+            bag.Open();
+            mmd.CommandText = "DELETE FROM URUNLISTE WHERE ID=@ID";
+            mmd.Parameters.AddWithValue("@ID",dataGridView1.CurrentRow.Cells[0].Value);
+            mmd.ExecuteNonQuery();
+            bag.Close();
+
+            two_effect fr3 = new two_effect();
+            fr3.Show();
             mmd.Parameters.Clear();
         }
     }

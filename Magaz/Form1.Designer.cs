@@ -165,7 +165,7 @@
             this.bunifuBilgi.IdleFillColor = System.Drawing.Color.White;
             this.bunifuBilgi.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuBilgi.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuBilgi.Location = new System.Drawing.Point(51, 16);
+            this.bunifuBilgi.Location = new System.Drawing.Point(926, 13);
             this.bunifuBilgi.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuBilgi.Name = "bunifuBilgi";
             this.bunifuBilgi.Size = new System.Drawing.Size(229, 62);
@@ -193,12 +193,13 @@
             this.bunifuselme.IdleFillColor = System.Drawing.Color.White;
             this.bunifuselme.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuselme.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuselme.Location = new System.Drawing.Point(341, 16);
+            this.bunifuselme.Location = new System.Drawing.Point(621, 13);
             this.bunifuselme.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuselme.Name = "bunifuselme";
             this.bunifuselme.Size = new System.Drawing.Size(229, 62);
             this.bunifuselme.TabIndex = 2;
             this.bunifuselme.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuselme.Click += new System.EventHandler(this.bunifuselme_Click);
             // 
             // bunifuduzen
             // 
@@ -220,7 +221,7 @@
             this.bunifuduzen.IdleFillColor = System.Drawing.Color.White;
             this.bunifuduzen.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuduzen.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuduzen.Location = new System.Drawing.Point(631, 16);
+            this.bunifuduzen.Location = new System.Drawing.Point(340, 13);
             this.bunifuduzen.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuduzen.Name = "bunifuduzen";
             this.bunifuduzen.Size = new System.Drawing.Size(229, 62);
@@ -248,7 +249,7 @@
             this.bunifuekle.IdleFillColor = System.Drawing.Color.White;
             this.bunifuekle.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuekle.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuekle.Location = new System.Drawing.Point(921, 15);
+            this.bunifuekle.Location = new System.Drawing.Point(47, 13);
             this.bunifuekle.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuekle.Name = "bunifuekle";
             this.bunifuekle.Size = new System.Drawing.Size(229, 59);
