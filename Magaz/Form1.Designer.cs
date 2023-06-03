@@ -226,6 +226,7 @@
             this.bunifuduzen.Size = new System.Drawing.Size(229, 62);
             this.bunifuduzen.TabIndex = 1;
             this.bunifuduzen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuduzen.Click += new System.EventHandler(this.bunifuduzen_Click);
             // 
             // bunifuekle
             // 

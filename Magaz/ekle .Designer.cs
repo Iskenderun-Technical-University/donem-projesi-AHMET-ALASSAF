@@ -30,7 +30,7 @@ namespace Magaz
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ekle));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -304,7 +304,7 @@ namespace Magaz
             // 
             this.txtyap.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTransition1.SetDecoration(this.txtyap, BunifuAnimatorNS.DecorationType.None);
-            this.txtyap.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtyap.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtyap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtyap.HintForeColor = System.Drawing.Color.Empty;
             this.txtyap.HintText = "";
@@ -312,7 +312,7 @@ namespace Magaz
             this.txtyap.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtyap.LineIdleColor = System.Drawing.Color.Gray;
             this.txtyap.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtyap.LineThickness = 3;
+            this.txtyap.LineThickness = 5;
             this.txtyap.Location = new System.Drawing.Point(9, 180);
             this.txtyap.Margin = new System.Windows.Forms.Padding(4);
             this.txtyap.Name = "txtyap";
@@ -324,7 +324,7 @@ namespace Magaz
             // 
             this.txtfiyat.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTransition1.SetDecoration(this.txtfiyat, BunifuAnimatorNS.DecorationType.None);
-            this.txtfiyat.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtfiyat.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfiyat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtfiyat.HintForeColor = System.Drawing.Color.Empty;
             this.txtfiyat.HintText = "";
@@ -332,7 +332,7 @@ namespace Magaz
             this.txtfiyat.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtfiyat.LineIdleColor = System.Drawing.Color.Gray;
             this.txtfiyat.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtfiyat.LineThickness = 3;
+            this.txtfiyat.LineThickness = 5;
             this.txtfiyat.Location = new System.Drawing.Point(9, 274);
             this.txtfiyat.Margin = new System.Windows.Forms.Padding(4);
             this.txtfiyat.Name = "txtfiyat";
@@ -344,7 +344,7 @@ namespace Magaz
             // 
             this.txtbas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTransition1.SetDecoration(this.txtbas, BunifuAnimatorNS.DecorationType.None);
-            this.txtbas.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtbas.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtbas.HintForeColor = System.Drawing.Color.Empty;
             this.txtbas.HintText = "";
@@ -352,7 +352,7 @@ namespace Magaz
             this.txtbas.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtbas.LineIdleColor = System.Drawing.Color.Gray;
             this.txtbas.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtbas.LineThickness = 3;
+            this.txtbas.LineThickness = 5;
             this.txtbas.Location = new System.Drawing.Point(9, 78);
             this.txtbas.Margin = new System.Windows.Forms.Padding(4);
             this.txtbas.Name = "txtbas";
@@ -405,22 +405,22 @@ namespace Magaz
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Scale;
             this.bunifuTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             this.bunifuTransition1.Interval = 7;
             // 
             // ekle
@@ -459,7 +459,6 @@ namespace Magaz
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuclose;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuekle2;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox2;
         private System.Windows.Forms.Label lab4;
@@ -469,15 +468,16 @@ namespace Magaz
         private System.Windows.Forms.Label lab7;
         private System.Windows.Forms.Label lab6;
         private System.Windows.Forms.Label lab5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtyap;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtfiyat;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtbas;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuRating Rating1;
-        private Bunifu.Framework.UI.BunifuDatepicker Datepicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button butek1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuekle2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtyap;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtfiyat;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtbas;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public Bunifu.Framework.UI.BunifuRating Rating1;
+        public Bunifu.Framework.UI.BunifuDatepicker Datepicker1;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

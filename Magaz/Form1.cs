@@ -23,6 +23,8 @@ namespace Magaz
         //var for sqlcon
         SqlConnection bag = new SqlConnection();
         SqlDataAdapter db = new SqlDataAdapter();
+        SqlCommand mmd = new SqlCommand();
+        List<String> list = new List<string>();
      
         
      
@@ -56,7 +58,9 @@ namespace Magaz
 
         private void bunifuekle_Click(object sender, EventArgs e)
         {
-            Form frm_ek = new ekle();
+            ekle frm_ek = new ekle();
+            frm_ek.bunifuekle2.ButtonText = "ekleme";
+            frm_ek.state = 0;
             bunifuTransition1.ShowSync(frm_ek);
         }
 
@@ -132,6 +136,49 @@ namespace Magaz
         {
             Form diab = new home_effect();
             diab.Show();
+        }
+
+        private void bunifuduzen_Click(object sender, EventArgs e)
+        {
+            ekle frm_ek = new ekle();
+            frm_ek.bunifuekle2.ButtonText = "duzemleme";
+            frm_ek.state =Convert.ToInt32( dataGridView1.CurrentRow.Cells[0].Value);
+            bunifuTransition1.ShowSync(frm_ek);
+            try
+            {
+                bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
+                mmd.Connection = bag;
+                bag.Open();
+                mmd.CommandText = "SELECT baslık,yapan,fiyat,cesitler,Tarih,Oran FROM urunliste WHERE ID=@ID";
+                mmd.Parameters.AddWithValue("@ID",Convert.ToInt32( dataGridView1.CurrentRow.Cells[0].Value));
+                var rd = mmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    list.Add(Convert.ToString(rd[0]));
+                    list.Add(Convert.ToString(rd[1]));
+                    list.Add(Convert.ToString(rd[2]));
+                    list.Add(Convert.ToString(rd[3]));
+                    list.Add(Convert.ToString(rd[4]));
+                    list.Add(Convert.ToString(rd[5]));
+
+                }
+                
+                frm_ek.txtbas.Text = list[0];
+                frm_ek.txtyap.Text = list[1];
+                frm_ek.txtfiyat.Text = list[2];
+                frm_ek.comboBox1.Text = list[3];
+                frm_ek.Datepicker1.Value =Convert.ToDateTime(list[4]) ;
+                frm_ek.Rating1.Text = list[5];
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
+            finally
+            {
+                bag.Close();
+            }
+            mmd.Parameters.Clear();
         }
     }
 }

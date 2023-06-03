@@ -20,6 +20,7 @@ namespace Magaz
         SqlCommand mmd = new SqlCommand();
         List<String> list = new List<string>();
 
+        public int state;
         public ekle()
         {
             InitializeComponent();
@@ -59,14 +60,11 @@ namespace Magaz
                 {
                     comboBox1.Items.Add(list[i]);
                     i = i + 1;
-
-
                 }
             }
             catch(Exception EX)
             {
                 MessageBox.Show(EX.Message);
-
             }
             finally
             {
@@ -76,29 +74,76 @@ namespace Magaz
 
         private void bunifuekle2_Click(object sender, EventArgs e)
         {
-            MemoryStream ma = new MemoryStream();
-            pictureBox1.Image.Save(ma,System.Drawing.Imaging.ImageFormat.Jpeg);
-            var _pictureBox = ma.ToArray();
+            if (txtyap.Text=="" || txtbas.Text=="")
+            {
+                MessageBox.Show("Önce ürün bilgilerini doldurunuz");
+            }
+            else
+            {
+                if (state == 0)
+                {
+                    //INSERT
+
+                    //for convert image to bainry
+
+                    MemoryStream ma = new MemoryStream();
+                    pictureBox1.Image.Save(ma, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    var _pictureBox = ma.ToArray();
+
+                    //sql command 
+
+                    bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
+                    bag.Open();
+                    mmd.Connection = bag;
+                    mmd.CommandText = "INSERT INTO urunliste (baslık,yapan,fiyat,cesitler,Tarih,Oran,fotograf) VALUES (@baslık,@yapan,@fiyat,@cesitler,@Tarih,@Oran,@fotograf)";
+                    mmd.Parameters.AddWithValue("@baslık", txtbas.Text);
+                    mmd.Parameters.AddWithValue("@yapan", txtyap.Text);
+                    mmd.Parameters.AddWithValue("@fiyat", txtfiyat.Text);
+                    mmd.Parameters.AddWithValue("@cesitler", comboBox1.Text);
+                    mmd.Parameters.AddWithValue("@Tarih", Datepicker1.Value);
+                    mmd.Parameters.AddWithValue("@Oran", Rating1.Value);
+                    mmd.Parameters.AddWithValue("@fotograf", _pictureBox);
+                    mmd.ExecuteNonQuery();
+                    bag.Close();
+                    Form fr1 = new home_effect();
+                    fr1.Show();
+                    this.Close();
+                }
+                else
+                {
+                    //DUZENLEME
 
 
+                    //for convert image to bainry
 
+                    MemoryStream ma = new MemoryStream();
+                    pictureBox1.Image.Save(ma, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    var _pictureBox = ma.ToArray();
 
+                    //sql command 
 
-            bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
-            bag.Open();
-            mmd.Connection = bag;
-            mmd.CommandText = "INSERT INTO urunliste (baslık,yapan,fiyat,cesitler,Tarih,Oran,fotograf) VALUES (@baslık,@yapan,@fiyat,@cesitler,@Tarih,@Oran,@fotograf)";
-            mmd.Parameters.AddWithValue("@baslık", txtbas.Text);
-            mmd.Parameters.AddWithValue("@yapan", txtyap.Text);
-            mmd.Parameters.AddWithValue("@fiyat", txtfiyat.Text);
-            mmd.Parameters.AddWithValue("@cesitler", comboBox1.Text);
-            mmd.Parameters.AddWithValue("@Tarih", Datepicker1.Value);
-            mmd.Parameters.AddWithValue("@Oran", Rating1.Value);
-            mmd.Parameters.AddWithValue("@fotograf", _pictureBox);
-            mmd.ExecuteNonQuery();
-            bag.Close();
-            Form fr1 = new home_effect();
-            fr1.Show();
+                    bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
+                    bag.Open();
+                    mmd.Connection = bag;
+                    mmd.CommandText = "UPDATE urunliste SET baslık=@baslık,yapan=@yapan,fiyat=@fiyat,cesitler=@cesitler,Tarih=@Tarih,Oran=@Oran,fotograf=@fotograf WHERE ID=@ID";
+                    mmd.Parameters.AddWithValue("@baslık", txtbas.Text);
+                    mmd.Parameters.AddWithValue("@yapan", txtyap.Text);
+                    mmd.Parameters.AddWithValue("@fiyat", txtfiyat.Text);
+                    mmd.Parameters.AddWithValue("@cesitler", comboBox1.Text);
+                    mmd.Parameters.AddWithValue("@Tarih", Datepicker1.Value);
+                    mmd.Parameters.AddWithValue("@Oran", Rating1.Value);
+                    mmd.Parameters.AddWithValue("@fotograf", _pictureBox);
+                    mmd.Parameters.AddWithValue("@ID", state);
+                    mmd.ExecuteNonQuery();
+                    bag.Close();
+                    Form fr2 = new three_effect();
+                    fr2.Show();
+                    this.Close();
+            }
+            }
+
+            mmd.Parameters.Clear();
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
