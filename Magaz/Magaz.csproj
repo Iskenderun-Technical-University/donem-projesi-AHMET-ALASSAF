@@ -97,6 +97,12 @@
     <Compile Include="three_effect .Designer.cs">
       <DependentUpon>three_effect .cs</DependentUpon>
     </Compile>
+    <Compile Include="fore_effect .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fore_effect .Designer.cs">
+      <DependentUpon>fore_effect .cs</DependentUpon>
+    </Compile>
     <Compile Include="two_effect .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="three_effect .resx">
       <DependentUpon>three_effect .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fore_effect .resx">
+      <DependentUpon>fore_effect .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="two_effect .resx">
       <DependentUpon>two_effect .cs</DependentUpon>

@@ -135,8 +135,54 @@ namespace Magaz
 
         private void bunifuBilgi_Click(object sender, EventArgs e)
         {
-            Form diab = new home_effect();
-            diab.Show();
+            fore_effect frm_bil = new fore_effect();         
+            bunifuTransition1.ShowSync(frm_bil);
+            try
+            {
+                bag.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\DBMAGAZA.mdf;Integrated Security=True");
+                mmd.Connection = bag;
+                bag.Open();
+                mmd.CommandText = "SELECT baslık,yapan,fiyat,cesitler,Tarih,Oran FROM urunliste WHERE ID=@ID";
+                mmd.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                var rd = mmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    list.Add(Convert.ToString(rd[0]));
+                    list.Add(Convert.ToString(rd[1]));
+                    list.Add(Convert.ToString(rd[2]));
+                    list.Add(Convert.ToString(rd[3]));
+                    list.Add(Convert.ToString(rd[4]));
+                    list.Add(Convert.ToString(rd[5]));
+
+                }
+
+                frm_bil.txtbas.Text = list[0];
+                frm_bil.txtyap.Text = list[1];
+                frm_bil.txtfiyat.Text = list[2];
+                frm_bil.txtces.Text = list[3];
+                frm_bil.Datepicker1.Value = Convert.ToDateTime(list[4]);
+                frm_bil.Rating1.Text = list[5];
+                bag.Close();
+
+                //image Reading in database
+                bag.Open();
+                mmd.CommandText = "SELECT FOTOGRAF FROM URUNLISTE WHERE ID=@IDIMAGE";
+                mmd.Parameters.AddWithValue("@IDIMAGE", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                byte[] img = (byte[])mmd.ExecuteScalar();
+                MemoryStream me = new MemoryStream();
+                me.Write(img, 0, img.Length);
+                frm_bil.pictureBox1.Image = Image.FromStream(me);
+
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
+            finally
+            {
+                bag.Close();
+            }
+            mmd.Parameters.Clear();
         }
 
         private void bunifuduzen_Click(object sender, EventArgs e)

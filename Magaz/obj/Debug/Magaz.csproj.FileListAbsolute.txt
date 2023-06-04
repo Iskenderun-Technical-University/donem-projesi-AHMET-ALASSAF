@@ -44,3 +44,4 @@ C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.cesit
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.home_effect.resources
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.three_effect.resources
 C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.two_effect.resources
+C:\Users\okyanus\Desktop\donem-projesi-AHMET-ALASSAF\Magaz\obj\Debug\Magaz.fore_effect.resources
